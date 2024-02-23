@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fredoka", sans-serif;
+  box-sizing: content-box;
+}
+
+h1 {
+  margin: 25px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  padding: 8px;
+  row-gap: 10px;
+  column-gap: 5px;
+  margin-bottom: 20px;
+  grid-template-areas:
+    "one one"
+    "two two"
+    "three four"
+    "five five"
+    "six eight"
+    "seven seven"
+    "nine nine"
+    "ten ten"
+    "eleven eleven"
+    "tweleve tweleve"
+    "thirteen thirteen";
+}
+
+#img-1 {
+  grid-area: one;
+}
+
+#img-2 {
+  grid-area: two;
+}
+
+#img-3 {
+  grid-area: three;
+}
+
+#img-4 {
+  grid-area: four;
+}
+
+#img-5 {
+  grid-area: five;
+}
+
+#img-6 {
+  grid-area: six;
+}
+
+#img-7 {
+  grid-area: seven;
+}
+
+#img-8 {
+  grid-area: eight;
+}
+
+#img-9 {
+  grid-area: nine;
+}
+
+#img-10 {
+  grid-area: ten;
+}
+
+#img-11 {
+  grid-area: eleven;
+}
+
+#img-12 {
+  grid-area: tweleve;
+}
+
+#img-13 {
+  grid-area: thirteen;
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery img {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.gallery .over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.gallery .over-lay:hover {
+  opacity: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in;
+  background-color: rgba(15, 15, 15, 0.329);
+}
+
+.color-white {
+  color: #fff;
+}
+
+footer {
+  background-color: #45474b1f;
+  text-align: center;
+  padding: 40px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 10px;
+  padding: 2px;
+}
+
+@media screen and (min-width: 720px) {
+  .photo-grid {
+    display: grid;
+    padding: 8px;
+    row-gap: 10px;
+    width: 98%;
+    column-gap: 5px;
+    margin-bottom: 20px;
+    grid-template-areas:
+      "one one two"
+      "three three four"
+      "five five nine"
+      "six six eight"
+      "seven seven ten"
+      "eleven eleven eleven"
+      "tweleve tweleve thirteen";
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .photo-grid {
+    display: grid;
+    padding: 8px;
+    width: 90%;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin-bottom: 20px;
+    grid-template-areas:
+      "one one two"
+      "three three four"
+      "five five nine"
+      "six six eight"
+      "seven seven ten"
+      "eleven tweleve thirteen";
+  }
+}
